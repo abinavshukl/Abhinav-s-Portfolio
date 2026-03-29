@@ -60,7 +60,7 @@
                 <i class="fas fa-bars text-2xl" aria-hidden="true"></i>
             </button>
 
-            <div id="nav-links" class="hidden w-full md:flex md:w-auto md:gap-6 text-sm font-medium mt-4 md:mt-0 flex-col md:flex-row bg-slate-900/95 md:bg-transparent p-4 md:p-0 rounded-lg border md:border-none border-slate-800 shadow-xl md:shadow-none absolute md:relative top-full left-0 md:top-auto">
+            <div id="nav-links" class="hidden w-full md:flex md:w-auto md:gap-6 text-sm font-medium mt-4 md:mt-0 flex-col md:flex-row bg-slate-900/95 md:bg-transparent p-4 md:p-0 rounded-lg border md:border-none border-slate-800 shadow-xl md:shadow-none absolute md:relative top-full left-0 right-0 md:top-auto md:right-auto">
                 <a href="#home" class="nav-item block py-2 md:py-0 uppercase tracking-wider text-cyan-400 hover:text-cyan-400 transition-colors">Home</a>
                 <a href="#about" class="nav-item block py-2 md:py-0 uppercase tracking-wider text-slate-400 hover:text-cyan-400 transition-colors">About</a>
                 <a href="#skills" class="nav-item block py-2 md:py-0 uppercase tracking-wider text-slate-400 hover:text-cyan-400 transition-colors">Skills</a>
@@ -75,7 +75,7 @@
     <!-- Main page content is split into clear sections so nav links can scroll to each one. -->
     <main id="main-content">
         <!-- Hero introduces you, your role, and the most important calls to action first. -->
-        <section id="home" class="min-h-screen flex items-center justify-center pt-20 relative overflow-hidden">
+        <section id="home" class="min-h-screen flex items-center justify-center pt-28 pb-12 md:pt-20 md:pb-0 relative overflow-hidden">
             <div class="absolute top-1/4 left-1/4 w-96 h-96 bg-cyan-600/20 rounded-full blur-[120px] pointer-events-none"></div>
             <div class="absolute bottom-1/4 right-1/4 w-96 h-96 bg-blue-600/10 rounded-full blur-[120px] pointer-events-none"></div>
             <div class="hero-grid absolute inset-0 pointer-events-none opacity-30"></div>
@@ -92,13 +92,13 @@
                 <div class="inline-block p-2 px-4 rounded-full border border-cyan-500/30 bg-cyan-500/10 text-cyan-400 mb-6 text-sm font-mono">
                     Hello, World! I am
                 </div>
-                <h1 class="text-5xl md:text-7xl font-extrabold text-white tracking-tight mb-4">
+                <h1 class="text-4xl sm:text-5xl md:text-7xl font-extrabold text-white tracking-tight mb-4">
                     Abhinav Kumar
                 </h1>
-                <h2 class="text-xl md:text-3xl text-slate-300 mb-8 font-light">
+                <h2 class="text-lg sm:text-xl md:text-3xl text-slate-300 mb-8 font-light">
                     Computer Science Engineer and Web Developer
                 </h2>
-                <p class="max-w-2xl text-lg text-slate-400 mb-10 leading-relaxed">
+                <p class="max-w-2xl text-base sm:text-lg text-slate-400 mb-10 leading-relaxed">
                     I build responsive websites, learn quickly, and enjoy turning practical ideas into clean digital experiences that feel simple to use.
                 </p>
 
@@ -343,7 +343,7 @@
 
                 <div class="grid md:grid-cols-2 gap-8">
                     <article class="group bg-slate-800/40 border border-slate-700 rounded-2xl overflow-hidden hover:-translate-y-2 hover:shadow-glow transition-all duration-300 flex flex-col">
-                        <div class="p-8 flex-1 flex flex-col">
+                        <div class="p-6 md:p-8 flex-1 flex flex-col">
                             <div class="flex justify-between items-start mb-6">
                                 <div class="p-3 bg-slate-900 rounded-lg border border-slate-700 text-cyan-400 group-hover:border-cyan-500/50 transition-colors">
                                     <i class="fas fa-microphone-alt text-xl" aria-hidden="true"></i>
@@ -356,7 +356,7 @@
                             </p>
                             <p class="text-sm text-slate-500">Repository link not added yet. This is a good place to attach a demo or GitHub repo later.</p>
                         </div>
-                        <div class="px-8 py-5 border-t border-slate-700/50 bg-slate-800/20">
+                        <div class="px-6 md:px-8 py-5 border-t border-slate-700/50 bg-slate-800/20">
                             <div class="flex flex-wrap gap-x-4 gap-y-2 text-xs font-mono text-cyan-400/80">
                                 <span>Python</span>
                                 <span>Voice Recognition</span>
@@ -366,7 +366,7 @@
                     </article>
 
                     <article class="group bg-slate-800/40 border border-slate-700 rounded-2xl overflow-hidden hover:-translate-y-2 hover:shadow-glow transition-all duration-300 flex flex-col">
-                        <div class="p-8 flex-1 flex flex-col">
+                        <div class="p-6 md:p-8 flex-1 flex flex-col">
                             <div class="flex justify-between items-start mb-6">
                                 <div class="p-3 bg-slate-900 rounded-lg border border-slate-700 text-cyan-400 group-hover:border-cyan-500/50 transition-colors">
                                     <i class="fas fa-laptop-code text-xl" aria-hidden="true"></i>
@@ -379,7 +379,7 @@
                             </p>
                             <p class="text-sm text-slate-500">You can strengthen this card later by adding screenshots, a case study, or a live demo link.</p>
                         </div>
-                        <div class="px-8 py-5 border-t border-slate-700/50 bg-slate-800/20">
+                        <div class="px-6 md:px-8 py-5 border-t border-slate-700/50 bg-slate-800/20">
                             <div class="flex flex-wrap gap-x-4 gap-y-2 text-xs font-mono text-cyan-400/80">
                                 <span>HTML</span>
                                 <span>CSS</span>
@@ -390,7 +390,7 @@
                     </article>
 
                     <article class="group bg-slate-800/40 border border-slate-700 rounded-2xl overflow-hidden hover:-translate-y-2 hover:shadow-glow transition-all duration-300 flex flex-col">
-                        <div class="p-8 flex-1 flex flex-col">
+                        <div class="p-6 md:p-8 flex-1 flex flex-col">
                             <div class="flex justify-between items-start mb-6">
                                 <div class="p-3 bg-slate-900 rounded-lg border border-slate-700 text-cyan-400 group-hover:border-cyan-500/50 transition-colors">
                                     <i class="fas fa-fan text-xl" aria-hidden="true"></i>
@@ -418,7 +418,7 @@
                                 <i class="fas fa-external-link-alt" aria-hidden="true"></i> View Live Project
                             </a>
                         </div>
-                        <div class="px-8 py-5 border-t border-slate-700/50 bg-slate-800/20">
+                        <div class="px-6 md:px-8 py-5 border-t border-slate-700/50 bg-slate-800/20">
                             <div class="flex flex-wrap gap-x-4 gap-y-2 text-xs font-mono text-cyan-400/80">
                                 <span>HTML5</span>
                                 <span>CSS3</span>
@@ -428,7 +428,7 @@
                     </article>
 
                     <article class="group bg-slate-800/40 border border-slate-700 rounded-2xl overflow-hidden hover:-translate-y-2 hover:shadow-glow transition-all duration-300 flex flex-col">
-                        <div class="p-8 flex-1 flex flex-col">
+                        <div class="p-6 md:p-8 flex-1 flex flex-col">
                             <div class="flex justify-between items-start mb-6">
                                 <div class="p-3 bg-slate-900 rounded-lg border border-slate-700 text-cyan-400 group-hover:border-cyan-500/50 transition-colors">
                                     <i class="fas fa-address-card text-xl" aria-hidden="true"></i>
@@ -456,7 +456,7 @@
                                 <i class="fas fa-external-link-alt" aria-hidden="true"></i> View Live Project
                             </a>
                         </div>
-                        <div class="px-8 py-5 border-t border-slate-700/50 bg-slate-800/20">
+                        <div class="px-6 md:px-8 py-5 border-t border-slate-700/50 bg-slate-800/20">
                             <div class="flex flex-wrap gap-x-4 gap-y-2 text-xs font-mono text-cyan-400/80">
                                 <span>HTML5</span>
                                 <span>CSS3</span>
