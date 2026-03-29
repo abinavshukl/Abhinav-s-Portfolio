@@ -2,6 +2,12 @@
 // This prevents animated elements from staying hidden if the script never loads.
 document.documentElement.classList.add("js-enabled");
 
+// Browsers may restore the last scroll position after refresh or redeploy preview opens.
+// For a portfolio landing page, a normal visit should start at the hero section unless a hash was requested.
+if ("scrollRestoration" in history) {
+    history.scrollRestoration = "manual";
+}
+
 // Grab the main elements once and reuse them later.
 // This keeps the code faster and easier to read than querying the DOM repeatedly.
 const yearElement = document.getElementById("year");
@@ -11,6 +17,14 @@ const navLinksContainer = document.getElementById("nav-links");
 const navItems = document.querySelectorAll(".nav-item");
 const sections = document.querySelectorAll("main section[id]");
 const revealElements = document.querySelectorAll(".reveal");
+
+// Start at the top when there is no section hash in the URL.
+// If someone intentionally opens a link like #projects, we leave that behavior alone.
+const resetInitialScroll = () => {
+    if (!window.location.hash) {
+        window.scrollTo({ top: 0, left: 0, behavior: "auto" });
+    }
+};
 
 // Put the current year into the footer automatically.
 // This way the portfolio stays updated without editing the file every year.
@@ -170,6 +184,10 @@ const handleScroll = () => {
 
 // Listen for scrolling and run the optimized scroll handler above.
 window.addEventListener("scroll", handleScroll, { passive: true });
+
+// pageshow also covers back/forward cache restores in some browsers.
+window.addEventListener("load", resetInitialScroll);
+window.addEventListener("pageshow", resetInitialScroll);
 
 // Run these once on page load so the UI is correct even before the first scroll event.
 updateNavbarStyle();
