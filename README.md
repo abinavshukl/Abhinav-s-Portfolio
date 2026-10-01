@@ -44,6 +44,9 @@ This ensures that visitors (and recruiters) always see the most interactive, pol
 2. Navigate into the directory: `cd Abhinav-s-Portfolio`
 3. Simply open `index.html` in your favorite web browser or use a local server like VS Code's Live Server extension.
 
+## 👨‍💻 Author & Developer
+**Abhinav Kumar** is the sole developer and author of this portfolio website, as well as all of the featured projects available on my GitHub profile. I am passionate about building clean, interactive, and practical web experiences.
+
 ## 📬 Contact
 - Email: abhinavshukla1000@gmail.com
 - LinkedIn: [Abhinav Kumar](https://www.linkedin.com/in/abhinav-kumar-619a231b1)
