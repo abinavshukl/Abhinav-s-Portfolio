@@ -45,7 +45,7 @@ This ensures that visitors (and recruiters) always see the most interactive, pol
 3. Simply open `index.html` in your favorite web browser or use a local server like VS Code's Live Server extension.
 
 ## 👨‍💻 Author & Developer
-**Abhinav Kumar** is the sole developer and author of this portfolio website, as well as all of the featured projects available on my GitHub profile. I am passionate about building clean, interactive, and practical web experiences.
+**Abhinav Kumar** is the developer and author of this portfolio website, as well as the featured projects available on my GitHub profile (with the exception of **Me and Memo**, which was a collaborative final-year college project built alongside my friends). I am passionate about building clean, interactive, and practical web experiences.
 
 ## 📬 Contact
 - Email: abhinavshukla1000@gmail.com
