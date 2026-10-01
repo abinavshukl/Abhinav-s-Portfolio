@@ -197,3 +197,57 @@ updateActiveNavItem();
 if (window.innerWidth >= 768) {
     navLinksContainer?.classList.remove("hidden");
 }
+
+// Initialize Typed.js for the hero subtitle
+if (document.getElementById('typed-subtitle')) {
+    new Typed('#typed-subtitle', {
+        strings: [
+            'Computer Science Engineering Graduate',
+            'Frontend Web Developer',
+            'Cybersecurity Enthusiast',
+            'Passionate Problem Solver'
+        ],
+        typeSpeed: 50,
+        backSpeed: 30,
+        backDelay: 2000,
+        loop: true,
+        showCursor: true,
+        cursorChar: '|'
+    });
+}
+
+
+// Dark Mode Toggle Logic
+const htmlEl = document.documentElement;
+const themeToggleBtn = document.getElementById('theme-toggle');
+const themeIcon = document.getElementById('theme-icon');
+const themeToggleBtnDesktop = document.getElementById('theme-toggle-desktop');
+const themeIconDesktop = document.getElementById('theme-icon-desktop');
+
+function toggleTheme() {
+    if (htmlEl.classList.contains('dark')) {
+        htmlEl.classList.remove('dark');
+        themeIcon.classList.remove('fa-sun');
+        themeIcon.classList.add('fa-moon');
+        if(themeIconDesktop) {
+            themeIconDesktop.classList.remove('fa-sun');
+            themeIconDesktop.classList.add('fa-moon');
+        }
+    } else {
+        htmlEl.classList.add('dark');
+        themeIcon.classList.remove('fa-moon');
+        themeIcon.classList.add('fa-sun');
+        if(themeIconDesktop) {
+            themeIconDesktop.classList.remove('fa-moon');
+            themeIconDesktop.classList.add('fa-sun');
+        }
+    }
+}
+
+if(themeToggleBtn) {
+    themeToggleBtn.addEventListener('click', toggleTheme);
+}
+if(themeToggleBtnDesktop) {
+    themeToggleBtnDesktop.addEventListener('click', toggleTheme);
+}
+
