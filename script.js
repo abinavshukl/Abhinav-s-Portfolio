@@ -217,37 +217,24 @@ if (document.getElementById('typed-subtitle')) {
 }
 
 
-// Dark Mode Toggle Logic
-const htmlEl = document.documentElement;
-const themeToggleBtn = document.getElementById('theme-toggle');
-const themeIcon = document.getElementById('theme-icon');
-const themeToggleBtnDesktop = document.getElementById('theme-toggle-desktop');
-const themeIconDesktop = document.getElementById('theme-icon-desktop');
 
-function toggleTheme() {
-    if (htmlEl.classList.contains('dark')) {
-        htmlEl.classList.remove('dark');
-        themeIcon.classList.remove('fa-sun');
-        themeIcon.classList.add('fa-moon');
-        if(themeIconDesktop) {
-            themeIconDesktop.classList.remove('fa-sun');
-            themeIconDesktop.classList.add('fa-moon');
-        }
-    } else {
-        htmlEl.classList.add('dark');
-        themeIcon.classList.remove('fa-moon');
-        themeIcon.classList.add('fa-sun');
-        if(themeIconDesktop) {
-            themeIconDesktop.classList.remove('fa-moon');
-            themeIconDesktop.classList.add('fa-sun');
-        }
-    }
-}
 
-if(themeToggleBtn) {
-    themeToggleBtn.addEventListener('click', toggleTheme);
-}
-if(themeToggleBtnDesktop) {
-    themeToggleBtnDesktop.addEventListener('click', toggleTheme);
-}
 
+// One-click copy email button with feedback
+const copyEmailBtn = document.getElementById('copy-email-btn');
+const copyEmailText = document.getElementById('copy-email-text');
+if (copyEmailBtn && copyEmailText) {
+    copyEmailBtn.addEventListener('click', () => {
+        const email = 'abhinavshukla1000@gmail.com';
+        navigator.clipboard.writeText(email).then(() => {
+            copyEmailText.textContent = 'Copied!';
+            copyEmailBtn.classList.add('border-emerald-500', 'text-emerald-400');
+            setTimeout(() => {
+                copyEmailText.textContent = 'Copy Email';
+                copyEmailBtn.classList.remove('border-emerald-500', 'text-emerald-400');
+            }, 2200);
+        }).catch(() => {
+            window.location.href = `mailto:${email}`;
+        });
+    });
+}

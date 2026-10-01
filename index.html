@@ -4,7 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Abhinav Kumar | Portfolio</title>
-    <meta name="description" content="Portfolio of Abhinav Kumar, a computer science engineer and web developer building responsive, practical web experiences.">
+        <meta name="description" content="Portfolio of Abhinav Kumar, a computer science engineer and web developer building responsive, practical web experiences.">
+    <!-- OpenGraph & Twitter Cards -->
+    <meta property="og:title" content="Abhinav Kumar | Full-Stack Developer">
+    <meta property="og:description" content="Full-stack developer building responsive web applications, secure REST APIs, and real-time backend systems.">
+    <meta property="og:image" content="my_images/IMG_20260223_003741_298.webp">
+    <meta name="twitter:card" content="summary_large_image">
     <link rel="icon" type="image/png" href="my_images/favicon.png">
 
     <script src="https://cdn.tailwindcss.com"></script>
@@ -90,8 +95,12 @@
                         class="relative w-40 h-40 md:w-48 md:h-48 rounded-full object-cover border-4 border-slate-800 shadow-glow"
                     >
                 </div>
-                <div class="inline-block p-2 px-4 rounded-full border border-cyan-500/30 bg-cyan-500/10 text-cyan-400 mb-6 text-sm font-mono">
-                    Hello, World! I am
+                <div class="inline-flex items-center gap-2 p-1.5 px-4 rounded-full border border-emerald-500/30 bg-emerald-500/10 text-emerald-400 mb-6 text-sm font-mono shadow-[0_0_15px_rgba(16,185,129,0.15)]">
+                    <span class="relative flex h-2.5 w-2.5">
+                        <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+                        <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-emerald-500"></span>
+                    </span>
+                    Available for Full-Stack Developer Roles & Internships
                 </div>
                 <h1 class="text-4xl sm:text-5xl md:text-7xl font-extrabold text-white tracking-tight mb-4">
                     Abhinav Kumar
@@ -100,25 +109,19 @@
                     <span id="typed-subtitle"></span>
                 </h2>
                 <p class="max-w-2xl text-base sm:text-lg text-slate-400 mb-10 leading-relaxed">
-                    I build responsive websites, learn quickly, and enjoy turning practical ideas into clean digital experiences that feel simple to use.
+                    Full-stack developer building responsive web applications, secure REST APIs, and real-time backend systems using Node.js, React, and MongoDB.
                 </p>
 
                 <div class="flex flex-wrap justify-center gap-4 mb-8">
-                    <a href="mailto:abhinavshukla1000@gmail.com" class="flex items-center gap-2 bg-cyan-500 text-slate-950 px-6 py-3 rounded-lg font-bold hover:bg-cyan-400 transition-colors shadow-glow">
-                        <i class="fas fa-envelope" aria-hidden="true"></i> Contact Me
+                    <a href="#projects" class="flex items-center gap-2 bg-cyan-500 text-slate-950 px-6 py-3 rounded-lg font-bold hover:bg-cyan-400 transition-colors shadow-glow">
+                        <i class="fas fa-code" aria-hidden="true"></i> View Featured Work
                     </a>
-                    <a href="#projects" class="flex items-center gap-2 bg-slate-800 text-white px-6 py-3 rounded-lg font-bold border border-slate-700 hover:border-slate-500 transition-colors">
-                        <i class="fas fa-code" aria-hidden="true"></i> View Projects
+                    <a href="documents/Abhinav_Kumar_cv.pdf" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 bg-slate-100 text-slate-950 px-6 py-3 rounded-lg font-bold hover:bg-slate-200 transition-colors">
+                        <i class="fas fa-file-arrow-down" aria-hidden="true"></i> Download CV
                     </a>
-                    <a href="https://github.com/abinavshukl" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 bg-slate-800 text-white px-6 py-3 rounded-lg font-bold border border-slate-700 hover:border-slate-500 transition-colors">
-                        <i class="fab fa-github" aria-hidden="true"></i> GitHub Profile
-                    </a>
-                    <a href="https://www.linkedin.com/in/abhinav-kumar-619a231b1" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 bg-slate-800 text-white px-6 py-3 rounded-lg font-bold border border-slate-700 hover:border-slate-500 transition-colors">
-                        <i class="fab fa-linkedin" aria-hidden="true"></i> LinkedIn
-                    </a>
-                    <a href="documents/Abhinav_Kumar_cv.pdf" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 bg-white text-slate-950 px-6 py-3 rounded-lg font-bold hover:bg-slate-100 transition-colors">
-                        <i class="fas fa-file-arrow-down" aria-hidden="true"></i> Resume
-                    </a>
+                    <button id="copy-email-btn" class="flex items-center gap-2 bg-slate-800 text-white px-6 py-3 rounded-lg font-bold border border-slate-700 hover:border-slate-500 transition-all">
+                        <i class="fas fa-copy" aria-hidden="true"></i> <span id="copy-email-text">Copy Email</span>
+                    </button>
                 </div>
 
                 <div class="grid sm:grid-cols-3 gap-4 w-full max-w-3xl">
@@ -176,19 +179,19 @@
                     </div>
 
                     <div class="space-y-4">
-                        <div class="flex items-center gap-4 p-4 bg-slate-800/50 border border-slate-700 rounded-lg">
+                        <div class="stat-card flex items-center gap-4 p-4 bg-slate-800/50 border border-slate-700 rounded-lg">
                             <i class="fas fa-envelope text-cyan-400 w-5" aria-hidden="true"></i>
                             <span class="text-slate-300 break-all">abhinavshukla1000@gmail.com</span>
                         </div>
-                        <div class="flex items-center gap-4 p-4 bg-slate-800/50 border border-slate-700 rounded-lg">
+                        <div class="stat-card flex items-center gap-4 p-4 bg-slate-800/50 border border-slate-700 rounded-lg">
                             <i class="fas fa-phone text-cyan-400 w-5" aria-hidden="true"></i>
                             <span class="text-slate-300">+91 9005090290</span>
                         </div>
-                        <div class="flex items-center gap-4 p-4 bg-slate-800/50 border border-slate-700 rounded-lg">
+                        <div class="stat-card flex items-center gap-4 p-4 bg-slate-800/50 border border-slate-700 rounded-lg">
                             <i class="fas fa-map-marker-alt text-cyan-400 w-5" aria-hidden="true"></i>
                             <span class="text-slate-300">Hardoi, Uttar Pradesh, India</span>
                         </div>
-                        <div class="flex items-center gap-4 p-4 bg-slate-800/50 border border-slate-700 rounded-lg">
+                        <div class="stat-card flex items-center gap-4 p-4 bg-slate-800/50 border border-slate-700 rounded-lg">
                             <i class="fas fa-graduation-cap text-cyan-400 w-5" aria-hidden="true"></i>
                             <span class="text-slate-300">B.Tech in Computer Science Engineering</span>
                         </div>
@@ -290,7 +293,7 @@
                     <p class="text-slate-500 mb-12">Academic milestones that shaped my technical foundation.</p>
 
                     <div class="space-y-6">
-                        <div class="p-6 border border-slate-700 bg-slate-800/50 rounded-xl hover:border-slate-500 transition-colors relative overflow-hidden group">
+                        <div class="stat-card p-6 border border-slate-700 bg-slate-800/50 rounded-xl hover:border-slate-500 transition-colors relative overflow-hidden group">
                             <div class="absolute top-0 left-0 w-1 h-full bg-cyan-500 transform origin-bottom scale-y-0 group-hover:scale-y-100 transition-transform duration-300"></div>
                             <h3 class="text-lg font-bold text-white mb-1">B.Tech in Computer Science Engineering</h3>
                             <div class="text-cyan-400 font-medium mb-2 text-sm">Shri Ramswaroop Memorial University</div>
@@ -300,7 +303,7 @@
                             </div>
                         </div>
 
-                        <div class="p-6 border border-slate-700 bg-slate-800/50 rounded-xl hover:border-slate-500 transition-colors relative overflow-hidden group">
+                        <div class="stat-card p-6 border border-slate-700 bg-slate-800/50 rounded-xl hover:border-slate-500 transition-colors relative overflow-hidden group">
                             <div class="absolute top-0 left-0 w-1 h-full bg-cyan-500 transform origin-bottom scale-y-0 group-hover:scale-y-100 transition-transform duration-300"></div>
                             <h3 class="text-lg font-bold text-white mb-1">Polytechnic Diploma in CSE</h3>
                             <div class="text-cyan-400 font-medium mb-2 text-sm">Shri Ramswaroop Memorial University</div>
@@ -310,7 +313,7 @@
                             </div>
                         </div>
 
-                        <div class="p-6 border border-slate-700 bg-slate-800/50 rounded-xl hover:border-slate-500 transition-colors relative overflow-hidden group">
+                        <div class="stat-card p-6 border border-slate-700 bg-slate-800/50 rounded-xl hover:border-slate-500 transition-colors relative overflow-hidden group">
                             <div class="absolute top-0 left-0 w-1 h-full bg-cyan-500 transform origin-bottom scale-y-0 group-hover:scale-y-100 transition-transform duration-300"></div>
                             <h3 class="text-lg font-bold text-white mb-1">High School</h3>
                             <div class="text-cyan-400 font-medium mb-2 text-sm">Santosh Kumar Inter College</div>
@@ -343,7 +346,7 @@
                 </div>
 
                 <div class="grid md:grid-cols-2 gap-8">
-                    <article class="group bg-slate-800/40 border border-slate-700 rounded-2xl overflow-hidden hover:-translate-y-2 hover:shadow-glow transition-all duration-300 flex flex-col">
+                    <article class="project-card group bg-slate-800/40 border border-slate-700 rounded-2xl overflow-hidden hover:-translate-y-2 hover:shadow-glow transition-all duration-300 flex flex-col">
                         <div class="p-6 md:p-8 flex-1 flex flex-col">
                             <div class="w-full h-48 mb-6 rounded-lg overflow-hidden relative border border-slate-700 group-hover:border-cyan-500/50 transition-colors shrink-0">
                                 <div class="absolute inset-0 bg-cyan-500/10 mix-blend-overlay group-hover:opacity-0 transition-opacity duration-300 z-10"></div>
@@ -386,7 +389,7 @@
                         </div>
                     </article>
 
-                    <article class="group bg-slate-800/40 border border-slate-700 rounded-2xl overflow-hidden hover:-translate-y-2 hover:shadow-glow transition-all duration-300 flex flex-col">
+                    <article class="project-card group bg-slate-800/40 border border-slate-700 rounded-2xl overflow-hidden hover:-translate-y-2 hover:shadow-glow transition-all duration-300 flex flex-col">
                         <div class="p-6 md:p-8 flex-1 flex flex-col">
                             <div class="w-full h-48 mb-6 rounded-lg overflow-hidden relative border border-slate-700 group-hover:border-cyan-500/50 transition-colors shrink-0">
                                 <div class="absolute inset-0 bg-cyan-500/10 mix-blend-overlay group-hover:opacity-0 transition-opacity duration-300 z-10"></div>
@@ -429,7 +432,7 @@
                         </div>
                     </article>
 
-                    <article class="group bg-slate-800/40 border border-slate-700 rounded-2xl overflow-hidden hover:-translate-y-2 hover:shadow-glow transition-all duration-300 flex flex-col">
+                    <article class="project-card group bg-slate-800/40 border border-slate-700 rounded-2xl overflow-hidden hover:-translate-y-2 hover:shadow-glow transition-all duration-300 flex flex-col">
                         <div class="p-6 md:p-8 flex-1 flex flex-col">
                             <div class="w-full h-48 mb-6 rounded-lg overflow-hidden relative border border-slate-700 group-hover:border-cyan-500/50 transition-colors shrink-0">
                                 <div class="absolute inset-0 bg-cyan-500/10 mix-blend-overlay group-hover:opacity-0 transition-opacity duration-300 z-10"></div>
@@ -474,7 +477,7 @@
                         </div>
                     </article>
 
-                    <article class="group bg-slate-800/40 border border-slate-700 rounded-2xl overflow-hidden hover:-translate-y-2 hover:shadow-glow transition-all duration-300 flex flex-col">
+                    <article class="project-card group bg-slate-800/40 border border-slate-700 rounded-2xl overflow-hidden hover:-translate-y-2 hover:shadow-glow transition-all duration-300 flex flex-col">
                         <div class="p-6 md:p-8 flex-1 flex flex-col">
                             <div class="w-full h-48 mb-6 rounded-lg overflow-hidden relative border border-slate-700 group-hover:border-cyan-500/50 transition-colors shrink-0">
                                 <div class="absolute inset-0 bg-cyan-500/10 mix-blend-overlay group-hover:opacity-0 transition-opacity duration-300 z-10"></div>
@@ -516,7 +519,7 @@
                         </div>
                     </article>
 
-                    <article class="group bg-slate-800/40 border border-slate-700 rounded-2xl overflow-hidden hover:-translate-y-2 hover:shadow-glow transition-all duration-300 flex flex-col">
+                    <article class="project-card group bg-slate-800/40 border border-slate-700 rounded-2xl overflow-hidden hover:-translate-y-2 hover:shadow-glow transition-all duration-300 flex flex-col">
                         <div class="p-6 md:p-8 flex-1 flex flex-col">
                             <div class="w-full h-48 mb-6 rounded-lg overflow-hidden relative border border-slate-700 group-hover:border-cyan-500/50 transition-colors shrink-0">
                                 <div class="absolute inset-0 bg-cyan-500/10 mix-blend-overlay group-hover:opacity-0 transition-opacity duration-300 z-10"></div>
@@ -558,7 +561,7 @@
                         </div>
                     </article>
 
-                    <article class="group bg-slate-800/40 border border-slate-700 rounded-2xl overflow-hidden hover:-translate-y-2 hover:shadow-glow transition-all duration-300 flex flex-col">
+                    <article class="project-card group bg-slate-800/40 border border-slate-700 rounded-2xl overflow-hidden hover:-translate-y-2 hover:shadow-glow transition-all duration-300 flex flex-col">
                         <div class="p-6 md:p-8 flex-1 flex flex-col">
                             <div class="w-full h-48 mb-6 rounded-lg overflow-hidden relative border border-slate-700 group-hover:border-cyan-500/50 transition-colors shrink-0">
                                 <div class="absolute inset-0 bg-cyan-500/10 mix-blend-overlay group-hover:opacity-0 transition-opacity duration-300 z-10"></div>
@@ -585,7 +588,7 @@
                         </div>
                     </article>
 
-                    <article class="group bg-slate-800/40 border border-slate-700 rounded-2xl overflow-hidden hover:-translate-y-2 hover:shadow-glow transition-all duration-300 flex flex-col">
+                    <article class="project-card group bg-slate-800/40 border border-slate-700 rounded-2xl overflow-hidden hover:-translate-y-2 hover:shadow-glow transition-all duration-300 flex flex-col">
                         <div class="p-6 md:p-8 flex-1 flex flex-col">
                             <div class="w-full h-48 mb-6 rounded-lg overflow-hidden relative border border-slate-700 group-hover:border-cyan-500/50 transition-colors shrink-0">
                                 <div class="absolute inset-0 bg-cyan-500/10 mix-blend-overlay group-hover:opacity-0 transition-opacity duration-300 z-10"></div>
@@ -635,7 +638,8 @@
                     </div>
 
                     
-                    <form action="https://formspree.io/f/placeholder" method="POST" class="mt-8 mb-8 space-y-4 max-w-2xl">
+                    <form action="https://api.web3forms.com/submit" method="POST" class="mt-8 mb-8 space-y-4 max-w-2xl">
+                        <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY_HERE">
                         <div class="grid md:grid-cols-2 gap-4">
                             <div>
                                 <label for="name" class="sr-only">Name</label>
