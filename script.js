@@ -238,3 +238,62 @@ if (copyEmailBtn && copyEmailText) {
         });
     });
 }
+
+// Contact Form Handler - Intercepts submission to prevent blank pages
+const contactForm = document.querySelector('form[action="https://api.web3forms.com/submit"]');
+if (contactForm) {
+    contactForm.addEventListener('submit', async function(e) {
+        e.preventDefault();
+        
+        const submitBtn = contactForm.querySelector('button[type="submit"]');
+        const originalBtnText = submitBtn.innerHTML;
+        submitBtn.innerHTML = 'Sending... <i class="fas fa-spinner fa-spin ml-2"></i>';
+        submitBtn.disabled = true;
+
+        // Remove any existing result message
+        const existingMsg = document.getElementById('form-result');
+        if (existingMsg) existingMsg.remove();
+
+        const formData = new FormData(contactForm);
+        
+        // Check if the user forgot to change the placeholder key
+        if (formData.get('access_key') === 'YOUR_ACCESS_KEY_HERE') {
+            const resultMsg = document.createElement('div');
+            resultMsg.id = 'form-result';
+            resultMsg.className = 'mt-4 p-4 rounded-lg bg-red-500/10 border border-red-500/50 text-red-400 font-bold';
+            resultMsg.innerHTML = 'Error: You must replace "YOUR_ACCESS_KEY_HERE" with a real Web3Forms Access Key in index.html (Line 662) for the form to work.';
+            contactForm.appendChild(resultMsg);
+            
+            submitBtn.innerHTML = originalBtnText;
+            submitBtn.disabled = false;
+            return;
+        }
+
+        try {
+            const response = await fetch('https://api.web3forms.com/submit', {
+                method: 'POST',
+                body: formData
+            });
+            const data = await response.json();
+            
+            const resultMsg = document.createElement('div');
+            resultMsg.id = 'form-result';
+            resultMsg.className = 'mt-4 p-4 rounded-lg font-bold ' + (data.success ? 'bg-green-500/10 border border-green-500/50 text-green-400' : 'bg-red-500/10 border border-red-500/50 text-red-400');
+            resultMsg.innerHTML = data.message;
+            contactForm.appendChild(resultMsg);
+
+            if (data.success) {
+                contactForm.reset();
+            }
+        } catch (error) {
+            const resultMsg = document.createElement('div');
+            resultMsg.id = 'form-result';
+            resultMsg.className = 'mt-4 p-4 rounded-lg bg-red-500/10 border border-red-500/50 text-red-400 font-bold';
+            resultMsg.innerHTML = 'Something went wrong. Please check your internet connection and try again.';
+            contactForm.appendChild(resultMsg);
+        } finally {
+            submitBtn.innerHTML = originalBtnText;
+            submitBtn.disabled = false;
+        }
+    });
+}
